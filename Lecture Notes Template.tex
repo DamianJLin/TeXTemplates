@@ -1,0 +1,84 @@
+\documentclass[a4paper, 11pt]{article}
+
+
+%%%% Packages
+%% Critical packages
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{geometry}
+
+%% Situational packages
+\usepackage{physics} 	% Quick formatting of derivatives.
+\usepackage{mathtools}	% Formatting vertically centred colon (e.g. in \defeq).
+\usepackage{siunitx}	% Quick formatting of units.
+
+
+%%%% Page formatting
+\geometry{left = 54pt}
+\geometry{right = 54pt}
+\geometry{textheight = 702pt}
+\topmargin = -54pt
+\flushbottom
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{10truept}
+
+
+%%%% Custom commands
+%% Formatting
+\newcommand{\hln}{\vspace{-6mm}\begin{flushleft}\mbox{}\hrulefill\mbox{}\end{flushleft}\vspace{-6mm}}
+% Place a horizontal line with less spacing below with less spacing.
+% Not sure why this works.
+
+\newcommand{\hsurround}[1]{\hln #1 \vspace{-6pt} \hln}
+% Place a horizontal line above and below.
+
+%% Common sets
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\P}{\mathcal{P}}
+
+%% Boldface (e.g. for vectors)
+\renewcommand{\bf}[1]{\textbf{#1}}
+\renewcommand{\vec}[1]{\bf{#1}}
+
+%% Common operators
+\newcommand{\diag}[1]{\textrm{diag}\left(#1\right)}
+\newcommand{\re}[1]{\textrm{Re}\left(#1\right)}
+\newcommand{\imag}[1]{\textrm{Im}\left(#1\right)}
+\renewcommand{\op}[1]{\operatorname{#1}}
+
+%% Common characters
+\newcommand{\defeq}{\vcentcolon=}
+\newcommand{\eqdef}{=\vcentcolon}
+
+%% Theorems
+\theoremstyle{plain}
+\newtheorem*{theorem}{Theorem}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+\newtheorem*{example}{Example}
+
+
+
+\begin{document}
+\pagestyle{fancy}
+\begin{center}
+LECTURE NOTES\\
+
+[Subject Name]
+
+\hsurround{[Code] \hfill Lecture [No.] \hfill [Date]}
+\end{center}
+
+
+
+\end{document}
