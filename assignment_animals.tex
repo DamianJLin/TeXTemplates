@@ -80,16 +80,6 @@
 \newtheorem*{example}{Example}
 
 %% Tikzlings
-\newcommand{\randomcolor}{%
-	\definecolor{randomcolor}{RGB}
-	{
-		\pdfuniformdeviate 256,
-		\pdfuniformdeviate 256,
-		\pdfuniformdeviate 256
-	}%
-	\color{randomcolor}%
-}
-
 \cfoot{
 	\begin{tikzpicture}[scale=0.5] 
 		\tikzling[signpost=\scalebox{1.2}{\thepage}, ribbon=black]
