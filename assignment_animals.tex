@@ -13,11 +13,14 @@
 \usepackage{enumerate}
 \usepackage{float}
 \usepackage{geometry}
+\usepackage{newpxmath}
+\usepackage{newpxtext}
+\usepackage{xparse}
+\usepackage{tikz}
+\usepackage{tikzlings}
 
 %% Situational packages
-\usepackage{physics} 	% Quick formatting of derivatives.
 \usepackage{mathtools}	% Formatting vertically centred colon (e.g. in \defeq).
-\usepackage{siunitx}	% Quick formatting of units.
 
 
 %%%% Page formatting
@@ -26,7 +29,6 @@
 \geometry{textheight = 702pt}
 \setlength{\headheight}{14pt}
 \topmargin = -54pt
-\flushbottom
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{10truept}
@@ -50,6 +52,8 @@
 \newcommand{\C}{\mathbb{C}}
 \newcommand{\Z}{\mathbb{Z}}
 \renewcommand{\P}{\mathcal{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
 
 %% Boldface (e.g. for vectors)
 \renewcommand{\bf}[1]{\textbf{#1}}
@@ -59,7 +63,8 @@
 \newcommand{\diag}[1]{\textrm{diag}\left(#1\right)}
 \newcommand{\re}[1]{\textrm{Re}\left(#1\right)}
 \newcommand{\imag}[1]{\textrm{Im}\left(#1\right)}
-\renewcommand{\op}[1]{\operatorname{#1}}
+\newcommand{\cmod}[1]{\ (\mathrm{mod}\ #1)}
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
 
 %% Common characters
 \newcommand{\defeq}{\vcentcolon=}
@@ -74,16 +79,37 @@
 \newtheorem*{definition}{Definition}
 \newtheorem*{example}{Example}
 
+%% Tikzlings
+\newcommand{\randomcolor}{%
+	\definecolor{randomcolor}{RGB}
+	{
+		\pdfuniformdeviate 256,
+		\pdfuniformdeviate 256,
+		\pdfuniformdeviate 256
+	}%
+	\color{randomcolor}%
+}
+
+\cfoot{
+	\begin{tikzpicture}[scale=0.5] 
+		\tikzling[signpost=\scalebox{1.2}{\thepage}, ribbon=black]
+	\end{tikzpicture}
+}
+
 
 
 \begin{document}
-\pagestyle{fancy}
-\begin{center}
-Assignment [$x$]\\
+	\pagestyle{fancy}
+	\begin{center}
+		Assignment Name\\
+		
+		MATHXXXX: Course Name
+		
+		\hsurround{Student ID \hfill \today}
+	\end{center}
 
-[Subject Name]
+\section*{Question}
+Answer
 
-\hsurround{[SID] \hfill [Due Date]}
-\end{center}
 
 \end{document}
