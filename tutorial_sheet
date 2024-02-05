@@ -1,0 +1,144 @@
+\documentclass[a4paper, 11pt]{article}
+
+
+%%%% Packages
+%% Critical packages
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{geometry}
+\usepackage{newpxmath}
+\usepackage{newpxtext}
+\usepackage{lipsum}
+\usepackage{enumitem}
+
+%% Situational packages
+\usepackage{mathtools}	% Formatting vertically centred colon (e.g. in \defeq).
+
+
+%%%% Page formatting
+\geometry{left = 66pt}
+\geometry{right = 66pt}
+\geometry{top = 54pt}
+\geometry{bottom = 74pt}
+\geometry{headsep = 14pt}
+\setlength{\headheight}{14pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{10truept}
+
+
+%%%% Custom commands
+%% Formatting
+\newcommand{\hln}{\vspace{-7mm}\begin{flushleft}\mbox{}\hrulefill\mbox{}\end{flushleft}\vspace{-7mm}}
+% Place a horizontal line with less spacing below with less spacing.
+% Not sure why this works.
+
+\newcommand{\ds}{\displaystyle}
+% Quick force displaystlye
+
+\newcommand{\hsurround}[1]{\hln #1 \vspace{-6pt} \hln}
+% Place a horizontal line above and below.
+
+%% Common sets
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\renewcommand{\P}{\mathcal{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\F}{\mathbb{F}}
+
+%% Boldface (e.g. for vectors)
+\renewcommand{\bf}[1]{\textbf{#1}}
+\renewcommand{\vec}[1]{\bf{#1}}
+
+%% Common operators
+\newcommand{\diag}[1]{\textrm{diag}\left(#1\right)}
+\newcommand{\re}[1]{\textrm{Re}\left(#1\right)}
+\newcommand{\imag}[1]{\textrm{Im}\left(#1\right)}
+\newcommand{\cmod}[1]{\ (\mathrm{mod}\ #1)}
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+%% Common characters
+\newcommand{\defeq}{\vcentcolon=}
+\newcommand{\eqdef}{=\vcentcolon}
+\newcommand{\st}{\ensuremath{\ s.t. \ }}
+
+%% Theorems
+\theoremstyle{plain}
+\newtheorem*{theorem}{Theorem}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+\newtheorem*{example}{Example}
+
+%% Fancy Headers and Footers
+
+\pagestyle{fancy}
+\fancyhead[L]{MATH2922}
+\fancyfoot[R]{\tiny{\copyright \the\year{} The University of Sydney}}
+
+\fancypagestyle{firstpage}{
+	\pagestyle{fancy}
+	\fancyhead{}
+}
+
+\begin{document}
+
+	%%%%% Special header and title.
+
+	%% First page has special settings.
+	\thispagestyle{firstpage}
+	
+	%% Custom "Header"
+	\begin{center}
+	
+		\vspace*{-34pt}
+		\textsc{The University of Sydney}\\
+		
+		\textsc{School of Mathematics and Statistics}
+		\vspace{-3mm}
+		
+		\hsurround{MATH2922: Linear and Abstract Algebra (Advanced) \hfill Semester 1, \the\year{}}
+		
+	\end{center}
+	
+	%% Title and explanation
+	\begin{center}
+	
+	{ \Large \textbf{Introductory Module X -- Tutorial/Solutions} }
+	
+	\textit{Explanatory, introductory text goes here. }
+	\end{center}
+	
+%% Questions
+
+\begin{enumerate}[wide, label = \textbf{\arabic*.}]
+
+	\item Let $\F$ be a field.
+	
+	\begin{enumerate}[leftmargin=1.2cm]
+	\item Let $\lambda \in \F$. Show that $0\lambda = 0$.
+	\end{enumerate}
+	
+\end{enumerate}
+
+%% Solutions
+
+\begin{enumerate}[wide, label = \textit{Solution to} \textbf{\arabic*.}]
+
+	\item \phantom{.}
+	
+	\begin{enumerate}[leftmargin=1.2cm]
+	\item As $0$ is an additive identity in $\F$, using the distributive law and part (a), $0 = \lambda (0 + 0) = \lambda0 + \lambda0$. Hence, $0\lambda = 0$ by the Cancellation law (that is, by adding $-\lambda0$ to both sides). Hence $0\lambda = 0$.
+	\end{enumerate}
+	
+\end{enumerate}
+
+\end{document}
